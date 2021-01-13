@@ -1,0 +1,80 @@
+{
+  "name": "jquery-timers",
+  "version": "1.3.1",
+  "description": "jQuery timers abstraction class",
+  "main": "jquery.timers.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "jQuery",
+    "setTimeout",
+    "setInterval",
+    "clearTimeout",
+    "clearInterval",
+    "timer",
+    "abstraction",
+    "jquery-plugin",
+    "jquery-timers",
+    "ecosystem:jquery"
+  ],
+  "scripts": {
+    "clean": "rimraf dist && rimraf coverage",
+    "build": "npm run compile && npm run bundle && npm run minify",
+    "compile": "tsc",
+    "test": "karma start",
+    "coverage": "nyc -r text -e .ts -x \"test/*.test.ts\" npm run test",
+    "bundle": "rollup -c",
+    "minify": "uglifyjs dist/jquery.timers.js --output dist/jquery.timers.min.js --source-map \"filename='dist/jquery.timers.min.js.map',url='jquery.timers.min.js.map',content='dist/jquery.timers.js.map'\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgaert/jquery-timers.git"
+  },
+  "authors": [
+    "Michael Gärtner <mgaert@gmx.de>",
+    "Blair Mitchelmore",
+    "Arttu Manninen <arttu@kaktus.cc>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgaert/jquery-timers/issues"
+  },
+  "homepage": "https://github.com/mgaert/jquery-timers#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/parser": "^7.12.11",
+    "@babel/types": "^7.12.12",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@types/babel__core": "^7.1.12",
+    "@types/jasmine": "^3.6.2",
+    "@types/jasmine-jquery": "^1.5.33",
+    "@types/jquery": "^3.5.5",
+    "@types/karma": "^5.0.1",
+    "@types/node": "^14.14.20",
+    "jasmine": "^3.6.3",
+    "jasmine-jquery": "^2.1.1",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-firefox-launcher": "^2.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-jquery": "^0.2.4",
+    "karma-typescript": "^5.2.0",
+    "karma-typescript-es6-transform": "^5.2.0",
+    "karma-typescript-preprocessor": "^0.4.0",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.36.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3",
+    "uglify-js": "^3.12.4"
+  },
+  "dependencies": {
+    "jquery": "^3.4.0"
+  }
+}
