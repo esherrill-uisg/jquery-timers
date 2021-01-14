@@ -1,6 +1,4 @@
-/**
- * Extend the jQuery result declaration with the example plugin.
- */
+/// <reference types="jquery" />
 
 interface JQueryStatic {
   timer: TimerPlugin;
